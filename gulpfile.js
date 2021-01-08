@@ -46,6 +46,12 @@ const scripts = () => {
         .pipe(browserSync.stream());
 }
 
+const images = () => {
+    return gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.svg'])
+        .pipe(gulp.dest('build/images'))
+        .pipe(browserSync.stream());
+}
+
 const cleanBuild = () => {
     return gulp.src('build', {read: false})
         .pipe(clean());
@@ -55,6 +61,7 @@ const watch = () => {
     gulp.watch('src/*.pug', html)
     gulp.watch('src/styles/**/*.scss', styles)
     gulp.watch('src/js/**/*.js', scripts)
+    gulp.watch('src/images/**/*.*', images)
 }
 
 
@@ -71,6 +78,6 @@ const server = () => {
 
 exports.dev = series(
     cleanBuild,
-    parallel(html, styles, scripts),
+    parallel(html, styles, scripts, images),
     parallel(watch, server)
 )
