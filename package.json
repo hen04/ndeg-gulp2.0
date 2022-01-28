@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp dev",
-    "prod": "gulp prod",
     "webp": "gulp webp",
+    "prod": "gulp prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -103,11 +103,11 @@ exports.dev = series(
 	parallel(watcher, server)
 )
 
+exports.webp = series(
+	parallel(imagesWebp),
+)
+
 exports.prod = series(
 	cleanBuild,
 	parallel(html, styles,  scripts, fonts, imagesProd),
-)
-
-exports.webp = series(
-	parallel(imagesWebp),
 )
