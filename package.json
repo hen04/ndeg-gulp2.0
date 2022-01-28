@@ -1,26 +1,26 @@
 {
   "name": "ndeg-gulp2.0",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "gulp dev",
+    "prod": "gulp prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.13",
-    "fs": "0.0.1-security",
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean": "^0.4.0",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-data": "^1.3.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.1.0",
+    "gulp-libsquoosh": "^1.0.12",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "imagemin": "^7.0.1",
-    "imagemin-pngquant": "^9.0.1"
+    "sass": "^1.49.0"
   }
 }
