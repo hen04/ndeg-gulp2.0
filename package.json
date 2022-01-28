@@ -6,6 +6,7 @@
   "scripts": {
     "start": "gulp dev",
     "prod": "gulp prod",
+    "webp": "gulp webp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

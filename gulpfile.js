@@ -59,6 +59,15 @@ const images = () => {
 		.pipe(browserSync.stream());
 }
 
+const imagesWebp = () => {
+	return gulp.src("src/images/**/*.+(png|jpg|gif|svg)")
+		.pipe(squoosh({
+			webp: {}
+		}))
+		.pipe(gulp.dest("build/images/"))
+		.pipe(browserSync.stream());
+}
+
 const imagesProd = () => {
 	return gulp.src("src/images/**/*.+(png|jpg|gif|svg)")
 		.pipe(squoosh())
@@ -97,4 +106,8 @@ exports.dev = series(
 exports.prod = series(
 	cleanBuild,
 	parallel(html, styles,  scripts, fonts, imagesProd),
+)
+
+exports.webp = series(
+	parallel(imagesWebp),
 )
